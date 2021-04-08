@@ -30,3 +30,20 @@ module.exports.validateRegisterInput = (
         valid: Object.keys(errors).length < 1
     };
 }
+
+module.exports.validateLoginInput = (username, password) => {
+    const errors = {};
+
+    if (username.trim() === "") {
+        errors.username = "Please provide a valid username"
+    } 
+    if (password.trim() === "") {
+        errors.password = "Please provide a valid password"
+    } 
+
+    return {
+        errors,
+        valid: Object.keys(errors).length < 1
+    };
+
+}
