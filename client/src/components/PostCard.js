@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import moment from "moment";
 
 function PostCard ({ 
-    post: { body, createdAt, id, username, likeCount, commentCount } // Adicionar o likes
+    post: { body, createdAt, id, username, likeCount, commentCount }
 }) {
 
     function likePost() {
